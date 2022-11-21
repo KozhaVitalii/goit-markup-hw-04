@@ -23,6 +23,7 @@
   --fourth-background-color: #f4f4fd;
   --button-background-color: #e7e9fc;
   --button-bg-active-color: #404bbf;
+  --border-color: #8e8f99;
 }
 
 /* Если не используем нормализацию стилей то прописываем руками
@@ -34,37 +35,6 @@ html {
 *::after {
   box-sizing: inherit;
 } */
-
-/* Добавляем временный outline для работы с блоками */
-
-/* header {
-  outline: 2px solid #404bbf;
-} */
-/* .nav {
-  outline: 2px solid navy;
-}
-.site-nav {
-  outline: 2px solid #404bbf;
-}
-.contacts-nav {
-  outline: 2px solid red;
-} */
-/* .hero {
-  outline: 2px solid tomato;
-} */
-/* .section {
-  outline: 2px solid navy;
-} */
-/* .footer {
-  outline: 2px solid red;
-} */
-/* .flex-filter {
-  outline: 2px solid tomato;
-  background-color: navy;
-} */
-/* .portfolio-elements {
-    outline: 1px solid tomato;
-  } */
 
 body {
   margin: 0px;
@@ -230,6 +200,22 @@ h6 {
 }
 
 /* Стилизуем героя */
+.overlay {
+  max-width: 1440px;
+  height: 603px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.5),
+      rgba(46, 47, 66, 0.5)
+    ),
+    url('../images1/peopleoffice.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .hero {
   text-align: center;
   background-color: var(--title-text-color-second-bg-color);
@@ -327,6 +313,23 @@ h6 {
   padding-bottom: 0px;
 }
 
+.feature-elements {
+  background-color: var(--fourth-background-color);
+  border-radius: 4px;
+}
+
+.feature-block {
+  margin: 0;
+  width: 264px;
+  height: 112px;
+  padding: 24px 100px;
+  border-radius: 4px;
+  text-align: center;
+}
+/* .feature-block:not(:last-child) {
+  margin-right: 24px;
+} */
+
 .features {
   display: flex;
   min-width: 264px;
@@ -372,6 +375,9 @@ h6 {
 .team-elements {
   flex-basis: calc((100% - 72px) / 4);
   background-color: var(--first-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-background {
@@ -382,9 +388,41 @@ h6 {
   text-align: center;
 }
 
+/* Section Customers */
+
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-top: 72px;
+  gap: 24px;
+}
+
+.customers-elements {
+  background-color: var(--first-color);
+}
+
+.customer-block {
+  margin: 0;
+  width: 168px;
+  height: 88px;
+  padding: 16px 32px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-align: center;
+}
+.customer-block:not(:last-child) {
+  margin-right: 24px;
+}
+
 /* Стилизуем футер */
 
 .footer {
+  /* max-width: 1440px;
+  max-height: 310px; */
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: var(--title-text-color-second-bg-color);
@@ -451,6 +489,9 @@ h6 {
 .filter-button:focus {
   color: var(--first-color);
   background-color: var(--accent-bg-color-button-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .porfolio-section {
@@ -493,7 +534,10 @@ h6 {
   border: 0.5px solid #f4f4fd;
   /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); */
 }
-
+.portfolio-elements:hover {
+  border: 0.5px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .card-content {
   padding: 32px;
   padding-left: 16px;
