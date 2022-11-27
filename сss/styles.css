@@ -273,6 +273,7 @@ h6 {
 .hero-button:active {
   background-color: var(--button-bg-active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* outline-color: transparent; */
 }
 
 /* Стилизуем заголовки секций */
@@ -461,7 +462,7 @@ h6 {
 .customer-block-icon:hover,
 .customer-block-icon:focus {
   color: var(--accent-bg-color-button-text-color);
-  border-color: var(--accent-bg-color-button-text-color);
+  outline-color: var(--accent-bg-color-button-text-color);
 }
 
 /* Стилизуем футер */
@@ -548,6 +549,7 @@ h6 {
 .social-blok-footer:hover,
 .social-blok-footer:focus {
   background-color: var(--hover-background-color);
+  outline-color: transparent;
 }
 
 /* .social-items {
